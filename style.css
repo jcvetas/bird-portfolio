@@ -22,7 +22,7 @@ body {
     overflow: hidden;
     display: grid;
     margin: 0;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 0.1fr 4fr;
     grid-template-rows: 1fr;
     grid-template-areas:
         "a b";
@@ -37,21 +37,32 @@ aside {
 }
 
 main {
-    grid-area: b;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    grid-area: b;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "c"
+        "d";
     background-color: #CAF5F7;
 }
 
 .carousel {
+    grid-area: c;
     width: 70%;
     height: 50%;
     padding: 20px;
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-self: center;
+}
+
+.featured_image {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .featured_image > img {
@@ -61,7 +72,7 @@ main {
 
 .prev, .next {
     position: absolute;
-    top: 50%;
+    
 }
 
 .prev {
@@ -90,7 +101,7 @@ div.selected {
 }
 
 .text {
-
+    grid-area: d;
     align-self: flex-start;
     padding: 20px;
 }
