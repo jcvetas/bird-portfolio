@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat&display=swap');
+/* 
+Abril Fatface for headers
+Montserrat for other text
+*/
+
+
+h1, h2 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 35px;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+a, p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    overflow: hidden;
+    display: grid;
+    margin: 0;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "a b";
+}
+
+aside {
+    grid-area: a;
+    display: flex;
+    flex-direction: column;
+    background-color: #75BDB4;
+    padding: 10px;
+}
+
+main {
+    grid-area: b;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #CAF5F7;
+}
+
+.carousel {
+    width: 70%;
+    height: 50%;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.featured_image > img {
+    width: 100%;
+    height: auto;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+}
+
+.prev {
+    right: 90%;
+}
+
+.next {
+    left: 90%;
+}
+
+.container > div {
+    border: 1.5px solid gray;
+    background-color: gray;
+    margin: 10px;
+    width: 10%;
+}
+
+div.selected {
+    border-color: black;
+    background-color: black;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.text {
+
+    align-self: flex-start;
+    padding: 20px;
+}
+
+.dark body {
+    /* dark mode, default will be light */
+    /* black coral: 4E5A61 */
+
+    /* 
+    #243636
+    #245057
+    #87E8E5
+    #1E2E2E
+    #1E353B
+    
+    */
+}
+
+/* 
+light mode:
+#3A9269
+#75BDB4
+#B8F2F5
+#204859
+#C6D1D2
+
+*/
