@@ -31,5 +31,7 @@ function prevImg() {
             curr = 4;
         }
         document.getElementById("currImg").src = images[curr];
+        document.querySelector(".selected").className = "unselected";
+        document.getElementById(`${curr}`).className = "selected";
     }
 }
