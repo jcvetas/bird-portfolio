@@ -4,6 +4,57 @@ Abril Fatface for headers
 Montserrat for other text
 */
 
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, p {
+    color: #204859;
+}
+
+#gal {
+    color: #C6D1D2;
+    font-weight: 300;
+}
+
+#jake_container {
+    margin-bottom: 20px;
+    border: 11px #204859 solid;
+    border-radius: 2%;
+    height: 55%;
+}
+
+#jake {
+    height: 100%;
+    filter: grayscale(100);
+    
+}
+
+header {
+    background-color: #204859;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.img_container img {
+    border: 20px white solid;
+    margin: 20px;
+    border-radius: 25%;
+    width: 29%;
+}
+
+
+.img_container img:hover {
+    opacity: 50%;
+}
 
 h1, h2 {
     font-family: 'Abril Fatface', cursive;
@@ -19,39 +70,56 @@ a, p {
 }
 
 body {
-    overflow: hidden;
-    display: grid;
+    
     margin: 0;
-    grid-template-columns: 0.1fr 4fr;
-    grid-template-rows: 1fr;
-    grid-template-areas:
-        "a b";
+    background-color: #CAF5F7;
+    
 }
 
 aside {
-    grid-area: a;
     display: flex;
     flex-direction: column;
     background-color: #75BDB4;
-    padding: 10px;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+aside a {
+    padding-top: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+
+aside a:hover {
+    color: gray;
+}
+
+h1 {
+    font-size: 43px;
+}
+
+aside h1, aside button, aside a {
+    padding-left: 30px;
 }
 
 main {
     height: 100vh;
-    grid-area: b;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-        "c"
-        "d";
-    background-color: #CAF5F7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
 
 .carousel {
-    grid-area: c;
     width: 70%;
-    height: 50%;
     padding: 20px;
     position: relative;
     display: flex;
@@ -63,6 +131,8 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border: 11px #204859 solid;
+    border-radius: 2%;
 }
 
 .featured_image > img {
@@ -72,7 +142,7 @@ main {
 
 .prev, .next {
     position: absolute;
-    
+    cursor: pointer;
 }
 
 .prev {
@@ -84,15 +154,15 @@ main {
 }
 
 .container > div {
-    border: 1.5px solid gray;
+    border: 2.5px solid gray;
     background-color: gray;
     margin: 10px;
     width: 10%;
 }
 
 div.selected {
-    border-color: black;
-    background-color: black;
+    border-color: #204859;
+    background-color: #204859;
 }
 
 .container {
@@ -104,6 +174,45 @@ div.selected {
     grid-area: d;
     align-self: flex-start;
     padding: 20px;
+}
+
+
+aside button {
+    padding: 0px 5px;
+    text-decoration: none;
+    color: #3A9269;
+    font-size: 25px;
+    display: block;
+    transition: 0.3s;
+}
+
+aside button:hover {
+    color: #f1f1f1;
+}
+
+aside .closebtn {
+    position: absolute;
+    top: 10;
+    right: 25px;
+    border-color: white;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #3A9269;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    position: absolute;
+    left: 10;
+    margin-top: 10px;
+}
+  
+.openbtn:hover {
+    background-color: #444;
 }
 
 .dark body {
@@ -122,10 +231,10 @@ div.selected {
 
 /* 
 light mode:
-#3A9269
-#75BDB4
-#B8F2F5
-#204859
-#C6D1D2
+#3A9269 green
+#75BDB4 light blue/green
+#B8F2F5 lighter blue
+#204859 darker grayish blue
+#C6D1D2 light grayish blue
 
 */

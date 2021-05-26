@@ -5,24 +5,26 @@
     </head>
     <body>
         <aside id="sidebar">
+            <button class="closebtn" onclick="closeAside()">&#x2612;</button>
             <h1>Jake's Birds</h1>
-            <a href="#">Home</a>
-            <a href="#">Gallery</a>
-            <a href="#">About the Photographer</a>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About the Photographer</a>
         </aside>
         <main>
+            <button class="openbtn" onclick="openAside()">&#9776;</button>
             <section class="carousel">
                 <div class="featured_image">
-                    <img src="images/COGR.JPG">
+                    <img id="currImg" src="images/COGR.JPG">
                     <button class="prev">&lsaquo;</button>
                     <button class="next">&rsaquo;</button>
                 </div>
                 <div class="container">
-                    <div id="1" class="selected"></div>
-                    <div id="2"></div>
-                    <div id="3"></div>
-                    <div id="4"></div>
-                    <div id="5"></div>
+                    <div id="0" class="selected"></div>
+                    <div id="1" class="unselected"></div>
+                    <div id="2" class="unselected"></div>
+                    <div id="3" class="unselected"></div>
+                    <div id="4" class="unselected"></div>
                 </div>
                 
                 
@@ -34,4 +36,6 @@
             
         </main>
     </body>
+    <script type="text/javascript" src="carousel.js"></script>
+    <script type="text/javascript" src="sidebar_rest.js"></script>
 </html>
