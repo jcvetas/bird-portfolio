@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 /* 
 Abril Fatface for headers
 Montserrat for other text
@@ -35,6 +36,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: sticky;
 }
 
 .img_container {
@@ -48,7 +50,15 @@ header {
     border: 20px white solid;
     margin: 20px;
     border-radius: 25%;
-    width: 29%;
+    width: 100%;
+    cursor: pointer;
+}
+.gal {
+    margin: 20px;
+}
+
+i {
+    font-style: normal;
 }
 
 
@@ -62,7 +72,16 @@ h1, h2 {
 }
 
 h2 {
-    font-size: 25px;
+    font-size: 30px;
+}
+
+p {
+    font-size: 20px;
+}
+
+.special {
+    padding-left: 20px;
+    padding-bottom: 20px;
 }
 
 a, p {
@@ -110,12 +129,24 @@ aside h1, aside button, aside a {
     padding-left: 30px;
 }
 
+.special a {
+    color: #3A9269;
+    text-decoration: none;
+}
+
+.special a:hover {
+    color: #2c6148;
+}
+
 main {
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+}
+
+#gallerymain {
+    align-items: flex-end;
 }
 
 .carousel {
@@ -213,6 +244,132 @@ aside .closebtn {
   
 .openbtn:hover {
     background-color: #444;
+}
+
+
+/* drop down menu: */
+
+
+
+*{
+  user-select: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+nav {
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+nav .drop-btn{
+  width: 400px;
+  background: #3A9269;
+  border-radius: 5px;
+  line-height: 55px;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  padding: 0 20px;
+  right: 0;
+}
+nav .drop-btn span{
+  float: right;
+  line-height: 50px;
+  cursor: pointer;
+}
+nav .tooltip{
+  position: absolute;
+  right: 32px;
+  top: 185px;
+  height: 15px;
+  width: 15px;
+  background: #3A9269;
+  transform: rotate(45deg);
+  display: none;
+}
+nav .tooltip.show{
+  display: block;
+}
+nav .wrapper{
+  position: absolute;
+  top: 192px;
+  display: flex;
+  width: 400px;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #3A9269;
+  display: none;
+  transition: all 0.3s ease;
+}
+.gal {
+    width: 29%;
+}
+nav .wrapper.show{
+  display: block;
+  display: flex;
+}
+.wrapper ul{
+  width: 400px;
+  list-style: none;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+.wrapper ul li{
+  line-height: 55px;
+}
+.wrapper ul li a{
+  position: relative;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 0 10px;
+  display: flex;
+  border-radius: 8px;
+  align-items: center;
+  text-decoration: none;
+}
+.wrapper ul li:hover a{
+  background: #2c6148;
+}
+ul li a .icon{
+  height: 40px;
+  width: 40px;
+  margin-right: 13px;
+  background: #ffffff1a;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+}
+ul li a .icon span{
+  line-height: 40px;
+  font-size: 20px;
+  color: #b0b3b8;
+}
+span.fas.fa-arrow-left {
+    font-size: 30px;
+}
+ul li a i{
+  position: absolute;
+  right: 10px;
+  font-size: 30px;
+  pointer-events: none;
+}
+.wrapper ul.date-drop,
+.wrapper ul.location-drop,
+.wrapper ul.tags-drop{
+  display: none;
+}
+.wrapper .arrow{
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+}
+.wrapper .arrow span{
+  margin-right: 15px;
 }
 
 .dark body {

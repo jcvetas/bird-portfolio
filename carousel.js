@@ -35,3 +35,17 @@ function prevImg() {
         document.getElementById(`${curr}`).className = "selected";
     }
 }
+
+curr = -1
+carousel()
+
+function carousel() {
+    curr += 1
+    if (curr == 5) {
+        curr = 0;
+    }
+    document.getElementById("currImg").src = images[curr];
+    document.querySelector(".selected").className = "unselected";
+    document.getElementById(`${curr}`).className = "selected";
+    setTimeout(carousel, 5000)
+}
