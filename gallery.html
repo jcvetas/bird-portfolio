@@ -2,13 +2,14 @@
     <head>
         <title>Gallery</title>
         <link rel="stylesheet" href="style.css">
+        <link href="lightbox2-2.11.3/src/css/lightbox.css" rel="stylesheet" />
     </head>
     <body>
         <header>
             <h1 id="gal">Gallery</h1>
             <button class="openbtn" onclick="openAside()">&#9776;</button>
         </header>
-        <main>
+        <main id="gallerymain">
             <aside id="sidebar">
                 <button class="closebtn" onclick="closeAside()">&#x2612;</button>
                 <h1>Jake's Birds</h1>
@@ -16,7 +17,302 @@
                 <a href="gallery.html">Gallery</a>
                 <a href="about.html">About the Photographer</a>
             </aside>
+            <nav>
+                <div class="drop-btn">
+                  Filter <span class="fas fa-caret-down">&#9660;</span>
+                </div>
+                <div class="tooltip"></div>
+                <div class="wrapper">
+                  <ul class="menu-bar">
+                    <li class="date-item">
+                      <a href="#">
+                        <div class="icon">
+                          <span class="fas fa-home"></span>
+                        </div>
+                        Date <i class="fas fa-angle-right">&#8250;</i>
+                      </a>
+                    </li>
+                    <li class="location-item">
+                      <a href="#">
+                        <div class="icon">
+                          <span class="fas fa-cog"></span>
+                        </div>
+                        Location <i class="fas fa-angle-right">&#8250;</i>
+                      </a>
+                    </li>
+                    <li class="tags-item">
+                      <a href="#">
+                        <div class="icon">
+                          <span class="fas fa-question-circle"></span>
+                        </div>
+                        Tags <i class="fas fa-angle-right">&#8250;</i>
+                      </a>
+                    </li>
+                  </ul>
+                  <!-- date Menu-items -->
+                  <ul class="date-drop">
+                    <li class="arrow back-date-btn"><span class="fas fa-arrow-left">&#8249;</span>Date</li>
+                    <li onclick="filterDate('2014')">
+                      <a href="#">
+                        <div class="icon">
+                          <span class="fas fa-user"></span>
+                        </div>
+                        2014
+                      </a>
+                    </li>
+                    <li onclick="filterDate('2015')">
+                      <a href="#">
+                        <div class="icon">
+                          <span class="fas fa-lock"></span>
+                        </div>
+                        2015
+                      </a>
+                    </li>
+                    <li onclick="filterDate('2016')">
+                      <a href="#">
+                        <div class="icon">
+                          <span class="fas fa-address-book"></span>
+                        </div>
+                        2016
+                      </a>
+                    </li>
+                    <li onclick="filterDate('2017')">
+                      <a href="#">
+                        <div class="icon">
+                          <span class="fas fa-globe-asia"></span>
+                        </div>
+                        2017 
+                      </a>
+                    </li>
+                    <li onclick="filterDate('2018')">
+                      <a href="#">
+                        <div class="icon">
+                          <span class="fas fa-sign-out-alt"></span>
+                        </div>
+                        2018 
+                      </a>
+                    </li>
+                    <li onclick="filterDate('2019')">
+                        <a href="#">
+                          <div class="icon">
+                            <span class="fas fa-sign-out-alt"></span>
+                          </div>
+                          2019
+                        </a>
+                      </li>
+                      <li onclick="filterDate('2020')">
+                        <a href="#">
+                          <div class="icon">
+                            <span class="fas fa-sign-out-alt"></span>
+                          </div>
+                          2020
+                        </a>
+                      </li>
+                      <li onclick="filterDate('2021')">
+                        <a href="#">
+                          <div class="icon">
+                            <span class="fas fa-sign-out-alt"></span>
+                          </div>
+                          2021 
+                        </a>
+                      </li>
+                  </ul>
+                  <!-- location Menu-items -->
+                  <ul class="location-drop">
+                    <li class="arrow back-location-btn"><span class="fas fa-arrow-left">&#8249;</span>Location</li>
+                    <li onclick="filterLoc('Arizona')">
+                      <a href="#">
+                        <div class="icon">
+                          <span class="fas fa-question-circle"></span>
+                        </div>
+                        Arizona
+                      </a>
+                    </li>
+                    <li onclick="filterLoc('California')">
+                      <a href="#">
+                        <div class="icon">
+                          <span class="fas fa-envelope"></span>
+                        </div>
+                        California 
+                      </a>
+                    </li>
+                    <li onclick="filterLoc('Colorado')">
+                      <a href="#">
+                        <div class="icon">
+                          <span class="fas fa-comment-alt"></span>
+                        </div>
+                        Colorado
+                      </a>
+                    </li>
+                    <li onclick="filterLoc('Illinois')">
+                      <a href="#">
+                        <div class="icon">
+                          <span class="fas fa-exclamation-circle"></span>
+                        </div>
+                        Illinois
+                      </a>
+                    </li>
+                    <li onclick="filterLoc('Indiana')">
+                        <a href="#">
+                          <div class="icon">
+                            <span class="fas fa-exclamation-circle"></span>
+                          </div>
+                          Indiana
+                        </a>
+                      </li>
+                      <li onclick="filterLoc('Mexico')">
+                        <a href="#">
+                          <div class="icon">
+                            <span class="fas fa-exclamation-circle"></span>
+                          </div>
+                          Mexico
+                        </a>
+                      </li>
+                  </ul>
+                  <!--Tags drop-->
+                  <ul class="tags-drop">
+                    <li class="arrow back-tags-btn"><span class="fas fa-arrow-left">&#8249;</span>Tags</li>
+                    <li onclick="filterTag('dove')">
+                      <a href="#">
+                        <div class="icon">
+                          <span class="fas fa-question-circle"></span>
+                        </div>
+                        Dove
+                      </a>
+                    </li>
+                    <li onclick="filterTag('flycatcher')">
+                      <a href="#">
+                        <div class="icon">
+                          <span class="fas fa-envelope"></span>
+                        </div>
+                        Flycatcher
+                      </a>
+                    </li>
+                    <li onclick="filterTag('gamebird')">
+                      <a href="#">
+                        <div class="icon">
+                          <span class="fas fa-comment-alt"></span>
+                        </div>
+                        Gamebird
+                      </a>
+                    </li>
+                    <li onclick="filterTag('gull/tern')">
+                      <a href="#">
+                        <div class="icon">
+                          <span class="fas fa-exclamation-circle"></span>
+                        </div>
+                        Gull/Tern
+                      </a>
+                    </li>
+                    <li onclick="filterTag('heron')">
+                        <a href="#">
+                          <div class="icon">
+                            <span class="fas fa-exclamation-circle"></span>
+                          </div>
+                          Heron
+                        </a>
+                      </li>
+                      <li onclick="filterTag('hummingbird')">
+                        <a href="#">
+                          <div class="icon">
+                            <span class="fas fa-exclamation-circle"></span>
+                          </div>
+                          Hummingbird
+                        </a>
+                      </li>
+                      <li onclick="filterTag('jay')">
+                        <a href="#">
+                          <div class="icon">
+                            <span class="fas fa-exclamation-circle"></span>
+                          </div>
+                          Jay
+                        </a>
+                      </li>
+                      <li onclick="filterTag('non-bird')">
+                        <a href="#">
+                          <div class="icon">
+                            <span class="fas fa-exclamation-circle"></span>
+                          </div>
+                          Non-Bird
+                        </a>
+                      </li>
+                      <li onclick="filterTag('owl')">
+                        <a href="#">
+                          <div class="icon">
+                            <span class="fas fa-exclamation-circle"></span>
+                          </div>
+                          Owl
+                        </a>
+                      </li>
+                      <li onclick="filterTag('raptor')">
+                        <a href="#">
+                          <div class="icon">
+                            <span class="fas fa-exclamation-circle"></span>
+                          </div>
+                          Raptor
+                        </a>
+                      </li>
+                      <li onclick="filterTag('shorebird')">
+                        <a href="#">
+                          <div class="icon">
+                            <span class="fas fa-exclamation-circle"></span>
+                          </div>
+                          Shorebird
+                        </a>
+                      </li>
+                      <li onclick="filterTag('sparrow')">
+                        <a href="#">
+                          <div class="icon">
+                            <span class="fas fa-exclamation-circle"></span>
+                          </div>
+                          Sparrow
+                        </a>
+                      </li>
+                      <li onclick="filterTag('swallow')">
+                        <a href="#">
+                          <div class="icon">
+                            <span class="fas fa-exclamation-circle"></span>
+                          </div>
+                          Swallow
+                        </a>
+                      </li>
+                      <li onclick="filterTag('thrush')">
+                        <a href="#">
+                          <div class="icon">
+                            <span class="fas fa-exclamation-circle"></span>
+                          </div>
+                          Thrush
+                        </a>
+                      </li>
+                      <li onclick="filterTag('warbler')">
+                        <a href="#">
+                          <div class="icon">
+                            <span class="fas fa-exclamation-circle"></span>
+                          </div>
+                          Warbler
+                        </a>
+                      </li>
+                      <li onclick="filterTag('waterfowl')">
+                        <a href="#">
+                          <div class="icon">
+                            <span class="fas fa-exclamation-circle"></span>
+                          </div>
+                          Waterfowl
+                        </a>
+                      </li>
+                      <li onclick="filterTag('woodpecker')">
+                        <a href="#">
+                          <div class="icon">
+                            <span class="fas fa-exclamation-circle"></span>
+                          </div>
+                          Woodpecker
+                        </a>
+                      </li>
+                  </ul>
+                </div>
+              </nav>
             <div class="img_container">
+                <!--
                 <img src="https://i.imgur.com/kpHwU2G.jpg" data-title="Gyrfalcon"> 
                 <img src="https://i.imgur.com/RoIseHm.jpg" data-title="Green Heron"> 
                 <img src="https://i.imgur.com/I76dOGL.jpg" data-title="Townsend's Warbler"> 
@@ -71,10 +367,14 @@
                 <img src="https://live.staticflickr.com/900/40329629184_735cfe1f8e_k.jpg" data-title="Dark-eyed Junco">
                 <img src="https://live.staticflickr.com/865/39230219130_cb91b98241_k.jpg" data-title="Brown-headed Cowbird">
 
+                -->
+                
 
             </div>
             
         </main>
     </body>
     <script type="text/javascript" src="sidebar_gallery.js"></script>
+    <script type="text/javascript" src="gallery.js"></script>
+    <script src="lightbox2-2.11.3/dist/js/lightbox-plus-jquery.js"></script>
 </html>
