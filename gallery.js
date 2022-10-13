@@ -1,5 +1,5 @@
 const imgs = [
-  {'url': 'https://i.imgur.com/a/2Ni1Auf', 'title': 'Black Tern', 'date': '2021', 'location': 'Illinois', 'tags': ['gull/tern']},
+  {'url': 'https://i.imgur.com/2Ni1Auf.jpg', 'title': 'Black Tern', 'date': '2021', 'location': 'Illinois', 'tags': ['gull/tern']},
   {'url': 'https://i.imgur.com/RoIseHm.jpg', 'title': 'Green Heron' , 'date': '2021' , 'location': 'Illinois' , 'tags': ['heron']}, 
   {'url': 'https://i.imgur.com/4vmF3PG.jpg', 'title': 'White-crowned Sparrow', 'date': '2021' , 'location': 'Illinois' , 'tags': ['sparrow']},
   {'url': 'https://i.imgur.com/gqfbdiK.jpg' , 'title': 'American Robin' , 'date': '2021' , 'location': 'Illinois' , 'tags': ['thrush']},
