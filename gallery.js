@@ -13,7 +13,7 @@ const imgs = [
   {'url': 'https://i.imgur.com/3kS0Rdp.jpg', title: 'Hermit Thrush', date: '2023', location: 'Wisconsin', tags: ['thrush']},
   {'url': 'https://i.imgur.com/OYMp7Qu.jpg', title: 'Field Sparrow', date: '2023', location: 'Wisconsin', tags: ['sparrow']},
   {'url': 'https://i.imgur.com/BcihKwP.jpg', title: 'Red Squirrel', date: '2023', location: 'Minnesota', tags: ['non-bird']},
-  {'url': 'https://i.imgur.com/x05cY1g.jpg', title: 'Black-capped Chickadee', date: '2023', location: 'Minnesota', tags: []},
+  {'url': 'https://i.imgur.com/a/x05cY1g', title: 'Black-capped Chickadee', date: '2023', location: 'Minnesota', tags: []},
   {'url': 'https://i.imgur.com/JkYlxDx.jpg', title: 'Sanderling', date: '2022', location: 'Illinois', tags: ['shorebird']},
   {'url': 'https://i.imgur.com/Y0ESs2z.jpg', title: 'Common Yellowthroat', date: '2022', location: 'Wisconsin', tags: ['warbler']},
   {'url': 'https://i.imgur.com/69xxeVt.jpg', title: 'American Avocet', date: '2022', location: 'Wisconsin', tags: ['shorebird']},
