@@ -1,4 +1,11 @@
 const imgs = [
+  {'url': 'https://imgur.com/ioxYW05.jpg', title: 'Mourning Dove', date: '2024', location: 'Wisconsin', tags: ['dove']},
+  {'url': 'https://imgur.com/4gp32pc.jpg', title: 'Hooded Warbler', date: '2024', location: 'Wisconsin', tags: ['warbler']},
+  {'url': 'https://imgur.com/3DsQru1.jpg', title: 'Red-winged Blackbird', date: '2024', location: 'Wisconsin', tags: []},
+  {'url': 'https://imgur.com/0dZvc45.jpg', title: 'Field Sparrow', date: '2024', location: 'Wisconsin', tags: ['sparrow']},
+  {'url': 'https://imgur.com/g4bl4aY.jpg', title: 'Ring-necked Duck', date: '2024', location: 'Wisconsin', tags: ['waterfowl']},
+  {'url': 'https://imgur.com/WE1gplw.jpg', title: 'Great Gray Owl', date: '2024', location: 'Minnesota', tags: ['owl']},
+  {'url': 'https://imgur.com/x9lLIOH.jpg', title: 'Mink', date: '2024', location: 'Wisconsin', tags: ['non-bird']},
   {'url': 'https://imgur.com/biaDTtQ.jpg', title: 'Wild Turkey', date: '2024', location: 'Wisconsin', tags: ['gamebird']},
   {'url': 'https://imgur.com/eo57fqu.jpg', title: 'Eastern Screech-Owl', date: '2024', location: 'Wisconsin', tags: ['owl']},
   {'url': 'https://imgur.com/Mb7cwBX.jpg', title: 'Peregrine Falcon', date: '2023', location: 'Illinois', tags: ['raptor']},
