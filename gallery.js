@@ -1,4 +1,7 @@
 const imgs = [
+  {'url': 'https://imgur.com/enmVh8h.jpg', title: 'Sandhill Crane', date: '2024', location: 'Wisconsin', tags: ['heron']},
+  {'url': 'https://imgur.com/5WzHSpg.jpg', title: 'Northern Flicker', date: '2024', location: 'Wisconsin', tags: ['woodpecker']},
+  {'url': 'https://imgur.com/vQac7se.jpg', title: 'Vesper Sparrow', date: '2024', location: 'Wisconsin', tags: ['sparrow']},
   {'url': 'https://imgur.com/ioxYW05.jpg', title: 'Mourning Dove', date: '2024', location: 'Wisconsin', tags: ['dove']},
   {'url': 'https://imgur.com/4gp32pc.jpg', title: 'Hooded Warbler', date: '2024', location: 'Wisconsin', tags: ['warbler']},
   {'url': 'https://imgur.com/3DsQru1.jpg', title: 'Red-winged Blackbird', date: '2024', location: 'Wisconsin', tags: []},
