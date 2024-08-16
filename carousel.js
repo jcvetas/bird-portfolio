@@ -1,5 +1,5 @@
 const images = [
-    'https://github.com/jcvetas/bird-portfolio/blob/main/images/COGR.JPG?raw=true',
+    'https://i.imgur.com/eCuXu6p.jpg',
     'https://i.imgur.com/G08iXpe.jpg',
     'https://i.imgur.com/Pg0IDsm.jpg',
     'https://i.imgur.com/lovKLgJ.jpg',
